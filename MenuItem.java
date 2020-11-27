@@ -13,6 +13,6 @@ public class MenuItem {
     String itemName;
     //TODO: bools or bytes for any options we need to add
     public void setName(String a){
-        //Placeholder
+        itemName=a.substring(a.length());
     }
 }
