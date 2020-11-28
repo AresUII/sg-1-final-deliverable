@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package restaurantsystem;
-
+import restaurantsystem.ByteCLI;
 /**
  *
  * @author AresUII
@@ -17,17 +17,12 @@ public class MealTable {
             this.tableStatus=a;
         }
     }
-    public String printStatus(){
-        String a="";
-        if(tableStatus==(byte)0){
-            a+="clean";
-        }
-        if(tableStatus==(byte)1){
-            a+="occupied";
-        }
-        if(tableStatus==(byte)2){
-            a+="dirty";
-        }
-        return a.substring(0,a.length());
+    byte[] isClean;
+    byte[] isOccupied;
+    byte[] isDirty;
+    public void printStatus(){
+        if(this.tableStatus==0){ByteCLI.printBytes(isClean);}
+        if(this.tableStatus==1){ByteCLI.printBytes(isOccupied);}
+        if(this.tableStatus==2){ByteCLI.printBytes(isDirty);}
     }
 }

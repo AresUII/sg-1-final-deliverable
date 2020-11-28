@@ -4,15 +4,18 @@
  * and open the template in the editor.
  */
 package restaurantsystem;
-import restaurantsystem.ByteCLI;
+import restaurantsystem.MealTable;
 /**
  *
  * @author AresUII
  */
-public class MenuItem {
-    byte[] itemName;
-    //TODO: bools or bytes for any options we need to add
-    public void setName(byte[] a){
-        System.arraycopy(a,0,itemName,0,a.length);
+public class RestaurantSystem {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        
     }
+    
 }
