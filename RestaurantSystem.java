@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package restaurantsystem;
-import restaurantsystem.MealTable;
+import restaurantsystem.*;
 /**
  *
  * @author AresUII
@@ -15,7 +15,9 @@ public class RestaurantSystem {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
+        MealTable foo=new MealTable();
+        foo.setStatus((byte)2);
+        foo.printStatus();
     }
     
 }
