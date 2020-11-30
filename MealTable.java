@@ -47,6 +47,7 @@ public class MealTable {
         (byte)(' '&0xff),
         (byte)(' '&0xff),
     };
+    public byte getStatus(){return tableStatus;}
     public void printStatus(){
         if(this.tableStatus==0){ByteCLI.printBytes(isClean);}
         if(this.tableStatus==1){ByteCLI.printBytes(isOccupied);}
