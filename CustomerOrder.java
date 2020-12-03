@@ -2,6 +2,7 @@ package restaurantsystem;
 
 /*
  * Edison Flanagan
+ * [add your names here]
  */
 
 /**
@@ -11,5 +12,5 @@ package restaurantsystem;
 import restaurantsystem.ByteCLI;
 import restaurantsystem.MenuItem;
 public class CustomerOrder {
-    
+    //constructor
 }
