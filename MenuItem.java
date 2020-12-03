@@ -14,13 +14,13 @@ import java.util.ListIterator;
  */
 public class MenuItem {
     private byte[] itemName = new byte[50];
-    private double price;
+    private long price;
     private ArrayList<byte[]> customerOptions = new ArrayList<byte[]>();
 
     public MenuItem() {
     	byte[] a = "Item Name".getBytes();
     	System.arraycopy(a,0,itemName,0,a.length);
-    	price = 0.00;
+    	price = 0;
 	}
 
     public MenuItem(byte[] name, double p) {
@@ -38,11 +38,11 @@ public class MenuItem {
     }
 
     public void setMenuItemPrice(double p){
-        price = p;
+        price = (long)(p*200);
     }
 
     public double getMenuItemPrice(){
-        return price;
+        return (double)(price/200.0d);
     }
 
     public void addCustomerOption(byte[] o){
