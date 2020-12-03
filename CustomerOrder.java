@@ -12,5 +12,5 @@ package restaurantsystem;
 import restaurantsystem.ByteCLI;
 import restaurantsystem.MenuItem;
 public class CustomerOrder {
-    //constructor
+    MenuItem[] itemList;
 }
