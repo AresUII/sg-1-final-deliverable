@@ -12,7 +12,7 @@ import restaurantsystem.ByteCLI;
 public class Employee {
     long employeeID;
     byte[] employeeName;
-    long[] employeeHash;//Looking at implementing BLAKE2b
+    long[] employeeHash;//Password; looking at implementing BLAKE2b
     byte[] employeeImagePath;
     public Employee(long empID,byte[] empName,long[] empHash,byte[] empImg){
         employeeID=empID;
