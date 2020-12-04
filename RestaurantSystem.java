@@ -7,7 +7,6 @@ package restaurantsystem;
 import restaurantsystem.*;
 import java.awt.*;
 import java.awt.event.*;
-import java.awt.geom.*;
 /**
  *
  * @author AresUII
@@ -26,12 +25,12 @@ public class RestaurantSystem {
         gfx.setSize(800,600);
         //User ID field
         TextField userField=new TextField("User ID");
-        userField.setBounds(300,50,200,50);
+        userField.setBounds(300,50,200,25);
         gfx.add(userField);
         
         //Password field
         TextField passField=new TextField("Password");
-        passField.setBounds(300,150,200,50);
+        passField.setBounds(300,150,200,25);
         gfx.add(passField);
         
         //Login button
