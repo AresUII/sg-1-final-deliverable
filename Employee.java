@@ -1,7 +1,7 @@
 /*
  * Edison Flanagan
  * 20201127
- * Section W01 (?)
+ * Section W01
  */
 package restaurantsystem;
 import restaurantsystem.ByteCLI;
@@ -14,6 +14,7 @@ public class Employee {
     byte[] employeeName;
     long[] employeeHash;//Password; looking at implementing BLAKE2b
     byte[] employeeImagePath;
+    boolean[] employeeTableAssignments;
     public Employee(long empID,byte[] empName,long[] empHash,byte[] empImg){
         employeeID=empID;
         System.arraycopy(empName,0,employeeName,0,150);
