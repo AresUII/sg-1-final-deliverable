@@ -41,5 +41,6 @@ public class RestaurantSystem {
         //setLayout to ensure last setBounds is not ignored
         gfx.setLayout(null);
         gfx.setVisible(true);
+        MenuItem.editMenu();
     }
 }
