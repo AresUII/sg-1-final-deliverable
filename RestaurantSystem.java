@@ -5,6 +5,8 @@
  */
 package restaurantsystem;
 import restaurantsystem.*;
+import java.awt.*;
+import java.awt.event.*;
 /**
  *
  * @author AresUII
@@ -15,9 +17,30 @@ public class RestaurantSystem {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        MealTable foo=new MealTable();
-        foo.setStatus((byte)2);
-        foo.printStatus();
+        Frame gfx=new Frame();
+        gfx.addWindowListener(new WindowAdapter(){
+            @Override
+            public void windowClosing(WindowEvent killGfx){gfx.dispose();}
+        });
+        gfx.setSize(800,600);
+        //User ID field
+        TextField userField=new TextField("User ID");
+        userField.setBounds(300,50,200,25);
+        gfx.add(userField);
+        
+        //Password field
+        TextField passField=new TextField("Password");
+        passField.setBounds(300,150,200,25);
+        gfx.add(passField);
+        
+        //Login button
+        Button acceptButton=new Button("Accept");
+        acceptButton.setBounds(300,250,200,50);
+        gfx.add(acceptButton);
+        
+        //setLayout to ensure last setBounds is not ignored
+        gfx.setLayout(null);
+        gfx.setVisible(true);
+        MenuItem.editMenu();
     }
-    
 }

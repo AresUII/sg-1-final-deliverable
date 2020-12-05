@@ -15,6 +15,7 @@ import restaurantsystem.MenuItem;
 public class CustomerOrder { 
     // Declaring all variables that are going to be used on this class
     MenuItem[] itemList;
+    
 	private int OrderID, TableID, Subtotal, Tax, Total;
 
 	
@@ -60,4 +61,6 @@ public class CustomerOrder {
 	public void setTotal(int total) {
 		Total = total;
 	}
+    long tip;
+    double getTip(){return (double)(tip*200.0d;)}
 }
