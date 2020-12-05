@@ -8,6 +8,8 @@ import restaurantsystem.ByteCLI;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.ListIterator;
+import java.awt.*;
+import java.awt.event.*;
 /**
  *
  * @author ill-education
@@ -25,7 +27,7 @@ public class MenuItem {
 
     public MenuItem(byte[] name, double p) {
     	System.arraycopy(name,0,itemName,0,name.length);
-    	price = p;
+    	price = (long)(p*200.0d);
 	}
 
     //TODO: bools or bytes for any options we need to add
@@ -110,7 +112,50 @@ public class MenuItem {
     		ByteCLI.printBytes(optionList.next());
     		System.out.print(" ");
     	}
-
-
+    }
+    public static void editMenu(){
+        Frame gfx=new Frame();
+        gfx.addWindowListener(new WindowAdapter(){
+            @Override
+            public void windowClosing(WindowEvent killGfx){gfx.dispose();}
+        });
+        //Item ID
+        gfx.setSize(800,600);
+        TextField itemField=new TextField("Item ID");
+        itemField.setBounds(
+            300,
+            50,
+            200,
+            25
+        );
+        gfx.add(itemField);
+        //Item Info
+        TextField infoField=new TextField("ItemInfo");
+        infoField.setBounds(
+            300,
+            150,
+            200,
+            25
+        );
+        gfx.add(infoField);
+        //Fetch
+        Button fetchItem=new Button("Fetch");
+        fetchItem.setBounds(
+            300,
+            250,
+            200,
+            50
+        );
+        gfx.add(fetchItem);
+        //Update
+        Button updateInfo=new Button("Update");
+        updateInfo.setBounds(
+            300,
+            350,
+            200,
+            50
+        );
+        gfx.setLayout(null);
+        gfx.setVisible(true);
     }
 }
